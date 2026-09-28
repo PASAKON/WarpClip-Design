@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
-SVG_DIR="/Users/gob/Projects/WarpClip-design/assets/logo/svg"
-FONT_DIR="/Users/gob/Projects/WarpClip-design/assets/fonts"
-PNG_DIR="/Users/gob/Projects/WarpClip-design/assets/logo/png"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SVG_DIR="$ROOT/assets/logo/svg"
+FONT_DIR="$ROOT/assets/fonts"
+PNG_DIR="$ROOT/assets/logo/png"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 GEIST_B64=$(base64 -i "$FONT_DIR/Geist-Bold.woff2")
 NEWS_B64=$(base64 -i "$FONT_DIR/Newsreader-Italic.ttf")
